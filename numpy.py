@@ -21,4 +21,9 @@ print("0-D array:",zero)
 two_d = np.array([23,43,56],[56,78,98,34])
 print("2D array:",two_d)
 
+#Create a 3-D array 
+three_d = np.array([23,45,67],[34,64,23],[5,44,56,33])
+print("3D Array:",three_d)
+
+
 
