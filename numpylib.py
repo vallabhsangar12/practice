@@ -173,10 +173,28 @@ ad = np.add(arr1, arr2)
 sub = np.subtract(arr1, arr2)
 mul = np.multiply(arr1, arr2)
 div = np.divide(arr1, arr2)
+mod = np.mod(arr1, arr2)
+rem = np.remainder(arr1, arr2)
+abs = np.absolute(arr)
 print(ad)
 print(sub)
 print(mul)
 print(div)
+print(mod)
+print(rem)
+print(abs)
+
+#logs 
+#log2() function
+arr = np.arange(1, 10)
+print(np.log2(arr))
+
+#log at any base
+nplog = np.frompyfunc(log, 2, 1)
+
+print(nplog(100, 15))
+
+
 
 
 
