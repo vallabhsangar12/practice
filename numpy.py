@@ -26,8 +26,14 @@ three_d = np.array([23,45,67],[34,64,23],[5,44,56,33])
 print("3D Array:",three_d)
 
 #check dimension of array
-check1 = print(zero.ndim)
-check2 = print(two_d.ndim)
-check3 = print(three_d.ndim)
+print(zero.ndim)
+print(two_d.ndim)
+print(three_d.ndim)
+
+#access array elements
+print(ar[0])
+
+#access 2d array
+print(two_d([1,3]))
 
 
