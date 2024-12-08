@@ -57,4 +57,9 @@ print(arr3)
 #iterating array
 for x in arr:
     print(x)
-    
+
+#iterating 2D array
+td = np.array([[2,3,4],[5,6,7]])
+ for x in td:
+   for y in x:
+  print(y)
