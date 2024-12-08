@@ -250,6 +250,7 @@ newarr = np.union1d(arr1, arr2)
 print(newarr)
 newarr = np.intersect1d(arr1, arr2, assume_unique=True)
 print(newarr)
-
-
-
+newarr = np.setdiff1d(set1, set2, assume_unique=True)
+print(newarr)
+newarr = np.setxor1d(set1, set2, assume_unique=True)
+print(newarr)
