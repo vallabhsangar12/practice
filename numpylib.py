@@ -216,5 +216,9 @@ num2 = 6
 x = np.lcm(num1, num2)
 
 print(x)
+#GCD (Greatest Common Denominator)
+x1 = np.gcd(num1, num2)
+print(x1)
+
 
 
