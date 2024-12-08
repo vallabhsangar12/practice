@@ -220,5 +220,12 @@ print(x)
 x1 = np.gcd(num1, num2)
 print(x1)
 
+#gcd in arr
+arr = np.array([20, 8, 32, 36, 16])
+
+x = np.gcd.reduce(arr)
+
+print(x)
+
 
 
