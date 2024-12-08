@@ -91,5 +91,12 @@ print(newar[2])
 x = np.where(arr == 4)
 print(x)
 
+x = np.where(arr%2 == 0)
+
+print(x)
+
+x = np.searchsorted(arr, 7)
+
+print(x)
 
 
