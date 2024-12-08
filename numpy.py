@@ -36,4 +36,5 @@ print(ar[0])
 #access 2d array
 print(two_d([1,3]))
 
-
+#access 3d array
+print(three_d[1, 0, 1])
