@@ -72,3 +72,8 @@ print(c)
 
 #join with stack function
 d = np.stack((a,b), axis=1)
+
+#array split
+newarr = np.array_split(arr2, 3)
+print(newarr)
+
