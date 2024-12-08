@@ -1,4 +1,5 @@
 
+import random
 import numpy as np
 
 arr = np.array([1,5,6,7,9])
@@ -125,5 +126,6 @@ newarr = array1[filter_arr]
 print(filter_arr)
 print(newarr)
 
-
-
+#random function
+x = random.randint(100)
+print(x)
