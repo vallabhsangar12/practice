@@ -198,6 +198,12 @@ print(nplog(100, 15))
 newarr = np.sum([arr1, arr2])
 print(newarr)
 
+#product 
+array32 = np.array([1, 2, 3, 4])
+
+v = np.prod(array32)
+
+print(v)
 
 
 
