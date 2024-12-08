@@ -77,3 +77,15 @@ d = np.stack((a,b), axis=1)
 newarr = np.array_split(arr2, 3)
 print(newarr)
 
+#Split Into Arrays
+
+arr5 = np.array([1, 2, 3, 4, 5, 6])
+
+newar = np.array_split(arr, 3)
+
+print(newar[0])
+print(newar[1])
+print(newar[2])
+
+
+
