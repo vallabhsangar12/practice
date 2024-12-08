@@ -1,4 +1,4 @@
-import numpy as np 
+import numpylib as np 
 
 arr = np.array([1,5,6,7,9])
 print("Array:",arr)
