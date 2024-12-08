@@ -102,5 +102,12 @@ print(x)
 #sort arr
 print(np.sort(arr))
 
+#arr filter
+array1 = np.array([41, 42, 43, 44])
+x = [True, False, True, False]
+newarrr = arr[x]
+print(newarrr)
+
+
 
 
