@@ -43,5 +43,5 @@ print(three_d[2]+three_d[3])
 
 #Slicing arrays
 print(arr[1:3])
-
-
+print(arr[3:])
+print(arr[:4])
