@@ -205,6 +205,9 @@ v = np.prod(array32)
 
 print(v)
 
+#difference
+newarr = np.diff(array32)
+print(newarr)
 
 
 
