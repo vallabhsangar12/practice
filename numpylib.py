@@ -99,4 +99,8 @@ x = np.searchsorted(arr, 7)
 
 print(x)
 
+#sort arr
+print(np.sort(arr))
+
+
 
