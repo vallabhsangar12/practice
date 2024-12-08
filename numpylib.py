@@ -152,3 +152,15 @@ arr = np.array([1, 2, 3, 4, 5])
 print(random.permutation(arr))
 
 #Universal Functions
+
+#zip function
+x = [1, 2, 3, 4]
+y = [4, 5, 6, 7]
+z = []
+for i, j in zip(x, y):
+  z.append(i + j)
+print(z)
+
+#add functions
+z = np.add(x, y)
+print(z)
