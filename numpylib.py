@@ -194,6 +194,11 @@ nplog = np.frompyfunc(log, 2, 1)
 
 print(nplog(100, 15))
 
+#sum values in arr1 and arr2
+newarr = np.sum([arr1, arr2])
+print(newarr)
+
+
 
 
 
