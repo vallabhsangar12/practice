@@ -145,3 +145,8 @@ print(x)
 #random shuffle
 random.shuffle(arr)
 print(arr)
+
+#random permutations
+arr = np.array([1, 2, 3, 4, 5])
+
+print(random.permutation(arr))
