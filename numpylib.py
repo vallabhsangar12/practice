@@ -60,6 +60,12 @@ for x in arr:
 
 #iterating 2D array
 td = np.array([[2,3,4],[5,6,7]])
- for x in td:
+for x in td:
    for y in x:
-  print(y)
+    print(y)
+
+#array join
+a = np.array([1,2,3])
+b = np.array([5,6,7])
+c = np.concatenate((a,b))
+print(c)
