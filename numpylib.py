@@ -150,3 +150,5 @@ print(arr)
 arr = np.array([1, 2, 3, 4, 5])
 
 print(random.permutation(arr))
+
+#Universal Functions
