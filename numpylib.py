@@ -233,12 +233,23 @@ print(x)
 arr = np.array([np.pi/2, np.pi/3, np.pi/4, np.pi/5])
 x = np.sin(arr)
 print(x)
+
 #hypo
 base = 3
 perp = 4
-
 x = np.hypot(base, perp)
-
 print(x)
+
+#set operations
+arr = np.array([1, 1, 1, 2, 3, 4, 5, 5, 6, 7])
+x = np.unique(arr)
+print(x)
+arr1 = np.array([1, 2, 3, 4])
+arr2 = np.array([3, 4, 5, 6])
+newarr = np.union1d(arr1, arr2)
+print(newarr)
+newarr = np.intersect1d(arr1, arr2, assume_unique=True)
+print(newarr)
+
 
 
