@@ -14,5 +14,11 @@ ar = np.array((4,6,8,4,2))
 print("ndarray:",ar)
 
 #0-D array
-zero = np.array(23)
+zero = np.array(23)   
 print("0-D array:",zero)
+
+#2-D array
+two_d = np.array([23,43,56],[56,78,98,34])
+print("2D array:",two_d)
+
+
