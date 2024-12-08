@@ -87,5 +87,9 @@ print(newar[0])
 print(newar[1])
 print(newar[2])
 
+# arr seach
+x = np.where(arr == 4)
+print(x)
+
 
 
