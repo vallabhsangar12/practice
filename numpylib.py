@@ -49,6 +49,12 @@ print(arr[-3:-1])
 print(arr[0:2, 1:2])
 print(two_d.shape)
 
+#shape and reshape
 arr2 = np.array(2,34,52,37,82,55,45,36,47,84,22,42)
 arr3 = arr2.reshape(3,4)
 print(arr3)
+
+#iterating array
+for x in arr:
+    print(x)
+    
