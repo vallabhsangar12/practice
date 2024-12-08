@@ -1,10 +1,11 @@
-import numpylib as np 
+
+import numpy as np
 
 arr = np.array([1,5,6,7,9])
 print("Array:",arr)
 
 #check numpy version
-print(np.version)
+print(np.__version__)
 
 #print arr type
 print(type(arr))
@@ -18,7 +19,7 @@ zero = np.array(23)
 print("0-D array:",zero)
 
 #2-D array
-two_d = np.array([23,43,56],[56,78,98,34])
+two_d = np.array([23,43,56],[56,78,98])
 print("2D array:",two_d)
 
 #Create a 3-D array 
@@ -38,3 +39,8 @@ print(two_d([1,3]))
 
 #access 3d array
 print(three_d[1, 0, 1])
+print(three_d[2]+three_d[3])
+
+#Slicing arrays
+print(arr[1:3])
+
