@@ -69,3 +69,6 @@ a = np.array([1,2,3])
 b = np.array([5,6,7])
 c = np.concatenate((a,b))
 print(c)
+
+#join with stack function
+d = np.stack((a,b), axis=1)
