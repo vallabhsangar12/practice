@@ -108,6 +108,22 @@ x = [True, False, True, False]
 newarrr = arr[x]
 print(newarrr)
 
+#filtering ex
+# Create an empty list
+filter_arr = []
+
+# go through each element in arr
+for element in array1:
+  # if the element is higher than 42, set the value to True, otherwise False:
+  if element > 42:
+    filter_arr.append(True)
+  else:
+    filter_arr.append(False)
+
+newarr = array1[filter_arr]
+
+print(filter_arr)
+print(newarr)
 
 
 
