@@ -192,3 +192,13 @@ for param in pdq:
       continue
 
     print("BEST SARIMA{}X{}12 model - AIC:{}".format(best_pdq, best_seasonal_pdq, best_aic))
+
+ #predict next 30 days
+    model = SARIMAX(df['Close'],
+                    order=best_pdq,
+                    seasonal_order= best_seasonal_pdq,
+                    enforce_stationarity=False,
+                    enforce_invertibility=False)
+    model = model.fit()
+predictions = model.predict(len(df['Close']),len(df['Close']),+30)
+predictions
