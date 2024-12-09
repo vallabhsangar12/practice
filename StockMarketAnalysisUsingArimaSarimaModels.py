@@ -181,3 +181,14 @@ for param in pdq:
                            enforce_stationarity=False,
                            enforce_invertibility=False)
       results = temp_model.fit()
+
+       #print("SARIMAX{}X{}12-AIC:{}".format(param, param_seasonal, result.aic))
+      if results.aic < best_aic:
+        best_aic = results.aic
+        best_pdq = param
+        best_seasonal_pdq = param_seasonal
+
+    except:
+      continue
+
+    print("BEST SARIMA{}X{}12 model - AIC:{}".format(best_pdq, best_seasonal_pdq, best_aic))
