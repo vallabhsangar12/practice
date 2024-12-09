@@ -122,3 +122,43 @@ print(forecast)
 plt.figure(figsize=(10,5))
 plt.plot(df['Close'], label='Actual')
 plt.plot(forecast, label='Forecast')
+
+
+#lets run SARIMA
+import statsmodels.api as sm
+import warnings
+p,d,q = 2,1,2
+model = sm.tsa.statespace.SARIMAX(df['Close'], 
+                                  order=(p,d,q),
+                                  seasonal_order= (p,d,q,12))
+model = model.fit()
+print(model.summary())
+
+
+predictions =  model.predict(start = len(df['Close']), end = len(df['Close'])+30) 
+
+#plot predictions
+plt.figure(figsize=(15,10))
+plt.plot(df["Close"], label ='Actual')
+plt.plot(predictions, color ='red',label='Predicted')
+plt.xlabel('Date')
+plt.ylabel('Close Price')
+plt.title('GOOGLE STOCK PRICE')
+
+#change legend location
+plt.legend(loc='upper left')
+plt.show()
+
+#lets update p,d,q
+
+#plot the prediction
+plt.figure(figsize=(15,10))
+plt.plot(df["Close"], label ='Actual' )
+plt.plot(predictions, color='red', label='Predicted')
+plt.xlabel('Date')
+plt.ylabel('Close Price')
+plt.ylabel('GOOGLE CLOSING PRICE')
+
+#change  legend location
+plt.legend(loc='upper left') 
+plt.show()
