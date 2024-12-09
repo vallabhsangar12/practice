@@ -41,6 +41,20 @@ df.describe()
 df = df[['Date','Close']]
 df.head()
 
-
+#figure
 fig = px.line(df, x='Date',y='Close',title='Google stock price')
+print(fig.show())
+fig = px.line(df,x='Date',y=df.columns,title='stock price')
 fig.show()
+
+#stationarity check
+from statsmodels.tsa.stattools import adfuller
+def stationarity(df):
+    result =adfuller(df)
+    print('ADF staticstics:%f' %result[0])
+    print('p-value:%f' %result[1])
+    if result[1]<=0.05
+    print("Data is stationary!")
+    else:
+        print("Data is not stationary!")
+check_stationarity(df['Close'])
