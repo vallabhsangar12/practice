@@ -94,3 +94,31 @@ print(x_acf)
 #partial autocorrection 
 from statsmodels.tsa.stattools import   acf,pacf
 plot_pacf(df['Close'], lags=20 , alpha=0.05)
+
+#lets define p,d,q
+p = 2
+d = 1
+q = 2
+
+#lets run arima with pmdarima
+from pmdarima.arima  import auto_arima
+model = auto_arima (df['Close'],start_P= 2, start_q= 2, max_p=5, max_q =5, start_p=0, seasonal=True,d =1, D =1, trace=True, error_action='ignore', suppress_warnings=True)
+
+model = auto_arima(df['Close'], seasonal=True,suppress_warnings=True)
+print(model.summary())
+
+# stats model and arima
+from statsmodels.tsa.arima.model import ARIMA
+p,d,q = 2 , 1, 2
+model = ARIMA(df['Close'],order= (p,d,q))
+model = model.fit()
+print(model.summary())
+
+#predict next 30 days
+forecast = model.predict(n_periods=30)
+print(forecast)
+
+#plot forecast
+plt.figure(figsize=(10,5))
+plt.plot(df['Close'], label='Actual')
+plt.plot(forecast, label='Forecast')
