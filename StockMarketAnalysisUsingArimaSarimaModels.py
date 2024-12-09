@@ -24,6 +24,10 @@ start_date = d2
 print("START DATE:",start_date)
 print("END DATE:",end_date)
 
+#Define ticker
+ticker = 'GOOGL'
+df = df.download(ticker,start=start_date,end= end_date, progress=False)
+print(df.head())
 
 
 
