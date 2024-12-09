@@ -54,7 +54,13 @@ def stationarity(df):
     print('ADF staticstics:%f' %result[0])
     print('p-value:%f' %result[1])
     if result[1]<=0.05
-    print("Data is stationary!")
+     print("Data is stationary!")
     else:
-        print("Data is not stationary!")
-check_stationarity(df['Close'])
+     print("Data is not stationary!")
+     check_stationarity(df['Close'])
+
+
+#data visualizations
+from statsmodels.tsa.seasonal   import  seasonal_decompose
+decompose =  seasonal_decompose(df['Close'], model='additive', period=30)
+decompose.plot()
