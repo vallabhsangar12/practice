@@ -27,8 +27,16 @@ print("END DATE:",end_date)
 #Define ticker
 ticker = 'GOOGL'
 df = df.download(ticker,start=start_date,end= end_date, progress=False)
-print(df.head())
+df.head()
 
+df["Date"] = df.index
+df.reset_index(drop= True, inplace= True)
+df.columns
+df.info()
+df.insert(0, "Date" , df.index, True)
+df.head()
+df.describe()
 
-
-
+#select columns
+df = df[['Date','Close']]
+df.head()
