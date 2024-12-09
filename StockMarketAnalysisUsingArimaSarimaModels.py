@@ -162,3 +162,22 @@ plt.ylabel('GOOGLE CLOSING PRICE')
 #change  legend location
 plt.legend(loc='upper left') 
 plt.show()
+
+
+#hyper parameter
+p = d = q = range(0,2)
+pdq = list(itertools.product(p,d,q))
+seasonal_pdq = [(x[0],x[1],x[2],12) for x in list(itertools.product(p,d,q))]
+best_aic = np.inf
+best_pdq = None
+best_seasonal_pdq = None
+temp_model = None
+for param in pdq:
+  for param_seasonal in seasonal_pdq:
+    try:
+      temp_model = SARIMAX(df['Close'],
+                           order = param,
+                           seasonal_order= param_seasonal,
+                           enforce_stationarity=False,
+                           enforce_invertibility=False)
+      results = temp_model.fit()
