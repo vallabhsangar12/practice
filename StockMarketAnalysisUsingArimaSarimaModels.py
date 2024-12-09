@@ -80,3 +80,12 @@ plot_acf (df['Close'].diff().dropna(), ax=axes[1,1])
  #2nd order differencing 
 axes [2,0].plot(df['Close'].diff().diff()); axes[2,0].set_title('1 st order differencing ')
 plot_acf (df['Close'].diff().dropna(), ax=axes[2,1])
+
+
+#find p value
+from statsmodels.graphics.tsaplots import plot_acf, plot_pacf
+pd.plotting.autocorrelation_plot(df['Close'])
+plot_acf(df['Close'], alpha=0.05)
+from statsmodels.tsa.stattools import acf,pacf
+x_acf = pd.DataFrame(acf(df['Close']))
+print(x_acf)
