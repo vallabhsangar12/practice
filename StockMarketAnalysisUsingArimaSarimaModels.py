@@ -40,3 +40,7 @@ df.describe()
 #select columns
 df = df[['Date','Close']]
 df.head()
+
+
+fig = px.line(df, x='Date',y='Close',title='Google stock price')
+fig.show()
