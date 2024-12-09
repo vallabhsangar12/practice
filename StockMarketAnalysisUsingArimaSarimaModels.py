@@ -202,3 +202,18 @@ for param in pdq:
     model = model.fit()
 predictions = model.predict(len(df['Close']),len(df['Close']),+30)
 predictions
+
+
+#plot the prediction
+plt.figure(figsize=(15,10))
+plt.plot(df["Close"], label ='Actual' )
+plt.plot(predictions, color='red', label='Predicted')
+plt.xlabel('Date')
+plt.ylabel('Close Price')
+plt.ylabel('GOOGLE CLOSING PRICE')
+
+#change  legend location
+plt.legend(loc='upper left') 
+plt.show()
+
+model.summary()
