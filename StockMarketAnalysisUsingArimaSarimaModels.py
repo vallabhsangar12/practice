@@ -89,3 +89,8 @@ plot_acf(df['Close'], alpha=0.05)
 from statsmodels.tsa.stattools import acf,pacf
 x_acf = pd.DataFrame(acf(df['Close']))
 print(x_acf)
+
+
+#partial autocorrection 
+from statsmodels.tsa.stattools import   acf,pacf
+plot_pacf(df['Close'], lags=20 , alpha=0.05)
