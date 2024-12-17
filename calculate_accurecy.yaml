@@ -1,0 +1,30 @@
+
+
+# Get actual and predicted values
+actual = df['Close']
+predicted = df['Predicted_ARIMA'].dropna()
+
+# Align the data to make sure we're comparing the same time periods
+actual = actual[predicted.index]
+
+# Calculate various accuracy metrics
+mae = mean_absolute_error(actual, predicted)
+mse = mean_squared_error(actual, predicted)
+rmse = np.sqrt(mse)
+r2 = r2_score(actual, predicted)
+
+# Calculate percentage accuracy using MAPE (Mean Absolute Percentage Error)
+mape = np.mean(np.abs((actual - predicted) / actual)) * 100
+accuracy = 100 - mape
+
+print(f'Mean Absolute Error: {mae:.2f}')
+print(f'Root Mean Squared Error: {rmse:.2f}')
+print(f'R-squared Score: {r2:.4f}')
+print(f'Model Accuracy: {accuracy:.2f}%')
+
+# Optional: Calculate directional accuracy (how well the model predicts price movements)
+actual_direction = np.sign(actual.diff().dropna())
+predicted_direction = np.sign(predicted.diff().dropna())
+directional_accuracy = np.mean(actual_direction == predicted_direction) * 100
+
+print(f'Directional Accuracy: {directional_accuracy:.2f}%')
